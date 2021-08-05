@@ -130,11 +130,22 @@ section.projects-intro{
 
     header{
         background: $dydetec-pink;
+
+        @include media-breakpoint-down(sm) {
+            h1{
+                font-size: 2rem;
+            }
+        }
     }
 }
 
 
 section.projects-categories{
+    @include media-breakpoint-down(sm) {
+        h2{
+            font-size: 1.9rem;
+        }
+    }
     figure{
         position: relative;
         border-radius: 0px !important;
@@ -162,6 +173,11 @@ section.projects-categories{
 
 
 section.projects-carousel{
+    @include media-breakpoint-down(sm) {
+        h2{
+            font-size: 1.9rem;
+        }
+    }
     figure{
         position: relative;
         border-radius: 0px !important;
@@ -206,6 +222,10 @@ section.project-page{
 
         h6{
             color: $dydetec-gray;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.1rem;
+            }
         }
 
         p{
@@ -291,6 +311,14 @@ section.tecnovigilancia-intro{
 
 section.tecnovigilancia-description{
     margin-top: -8rem;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 1.5rem;
+
+        h1{
+            font-size: 2rem;
+        }
+    }
 }
 
 
@@ -392,6 +420,12 @@ article{
 *
 -----------------------*/
 section.contact-section{
+    @include media-breakpoint-down(md) {
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+
     iframe.google-map-iframe{
         min-height: 99vh;
         width: 100%;
