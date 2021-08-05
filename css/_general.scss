@@ -1,0 +1,268 @@
+/* Mixins
+*
+-----------------------*/
+@function set-text-color($color){
+    @if(lightness($color) > 50){
+        @return #000000;
+    } @else {
+        @return #fff;
+    }
+}
+
+@mixin transition($time){
+    transition: all $time ease-out;
+}
+
+
+/* General Layout
+*
+-----------------------*/
+div[itemscope]{
+    display: none;
+}
+
+section{
+    // background-color: white;
+
+    &.hero{
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    &.half-hero{
+        width: 100%;
+        min-height: 60vh;
+    }
+
+    &.pink-section{
+        background: $dydetec-pink;
+        color: white;
+    }
+}
+
+.navbar{
+    // color: white;
+    // border-bottom: solid 1px $dydetec-gray;
+    box-shadow: 0px 0px 8px $dydetec-gray;
+    &.bg-light{
+        background: white !important;
+    }
+    // a{
+    //     font-size: 0.9rem;
+    // }
+    .nav-item.active{
+        color: $dydetec-pink;
+    }
+
+    // .navbar-toggler {
+    //     position: absolute;
+    //     right: 5rem;
+    //     padding: .25rem .75rem;
+    // }
+}
+
+footer{
+    background: $dydetec-navy;
+    color: white;
+    a{
+        color: white;
+
+        &:hover{
+            color: $dydetec-orange;
+        }
+    }
+    .list-inline.list-inline-bordered{
+        .list-inline-item{
+            border-right: 1px solid white;
+        }
+    }
+    .list-inline-item{
+        .fa-stack.fa-2x{
+            font-size: 1.25rem;
+        }
+    }
+
+    img{
+        width: 60%;
+
+        @include media-breakpoint-down(md) {
+            width: 40%;
+        }
+    }
+
+    // .copyright-bar{
+    //     background: #222222;
+
+    //     p, a{
+    //         font-size: 0.8rem;
+    //         color: $xynter-dark-gray;
+    //     }
+    // }
+}
+
+.black-transparent-bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+hr{
+    padding: 1px 0px;
+    background: $dydetec-gray;
+}
+
+.bg-pink{
+    background: $dydetec-pink;
+}
+
+.bg-blue{
+    // background: $dydetec-blue;
+    background: #026FC2;
+}
+
+.bg-red{
+    background: $dydetec-red;
+}
+
+.bg-gray{
+    background: $dydetec-gray;
+}
+
+main{
+    background: white;
+    overflow-x: hidden;
+}
+
+/* Cards
+*
+-----------------------*/
+.card{
+    .card-title{
+        color: $dydetec-blue;
+    }
+    .card-text{
+        color: $dydetec-gray;
+    }
+}
+
+.card-bottom-bordered{
+    border-bottom: 2px solid $dydetec-gray;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+/* Slider
+*
+-----------------------*/
+section{
+    .slick-gallery{
+        figure{
+            position: relative;
+            width: 100%;
+            h6{
+                position: absolute;
+                top: 50%;
+                text-align: center;
+                width: 100%;
+                color: white;
+            }
+        }
+
+        .slick-slide:not(.slick-current){
+            opacity: 0.3;
+            @include transition(300ms);
+        }
+        
+        .slick-slide{
+            padding: 1rem;
+        }
+        
+        button.slick-arrow{
+            background-color: $dydetec-turquoise;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 100%;
+            padding-top: -1rem;
+        
+            &.slick-prev::before{
+                font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";
+            }
+            &.slick-next::before{
+                font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";
+            }
+        }
+    }
+    
+    .slick-clients-gallery{
+        @extend .slick-gallery;
+    }
+
+    .slick-gallery-vertical{
+        figure{
+            position: relative;
+            width: 100%;
+            h6{
+                position: absolute;
+                top: 40%;
+                text-align: center;
+                width: 100%;
+                color: white;
+            }
+        }
+
+        .slick-slide:not(.slick-current){
+            opacity: 0.3;
+            @include transition(300ms);
+        }
+        
+        .slick-slide{
+            padding: 1rem;
+        }
+        
+        button.slick-arrow{
+            background-color: $dydetec-turquoise;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 100%;
+            padding-top: -1rem;
+        
+            &.slick-prev::before{
+                font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";
+            }
+            &.slick-next::before{
+                font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";
+            }
+        }
+    }
+
+    .slick-custom-slider-nav{
+        .slick-slide:not(.slick-current){
+            opacity: 0.3;
+            @include transition(300ms);
+        }
+
+        .slick-slide{
+            padding: 1rem;
+        }
+        
+        button.slick-arrow{
+            background-color: $dydetec-turquoise;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 100%;
+            padding-top: -1rem;
+        
+            &.slick-prev::before{
+                font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";
+            }
+            &.slick-next::before{
+                font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";
+            }
+        }
+    }
+}

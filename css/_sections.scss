@@ -1,0 +1,410 @@
+/* Home
+*
+-----------------------*/
+section.intro-video-content{
+    position: relative;
+    z-index: -10;
+    // width: 100vw;
+    // overflow-x: hidden;
+    h1{
+        font-size: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    #intro-video{
+        // position: fixed;
+        // overflow-x: hidden;
+
+
+        // position: absolute;
+        // right: 0;
+        // bottom: 0;
+        // min-width: 100%;
+        // min-height: 100%;
+
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        // position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    // section.intro{
+    //     position: relative;
+    //     bottom: 0;
+    //     background: rgba(0, 0, 0, 0.5);
+    //     background-image: url("../../launcher0219/static/img/sistema-facturacion-electronica-gratis.png");
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     color: #f1f1f1;
+    //     width: 100%;
+    //     padding: 20px;
+    //     overflow-x: hidden;
+
+    //     h2{
+    //         font-size: 1.5rem;
+    //     }
+
+    //     #down-arrows{
+    //         position: absolute;
+    //         bottom: 1rem;
+    //         left: 49%;
+    //     }
+    // }
+    
+    .home-intro{
+        position: relative;
+        bottom: 0px;
+        // background-image: url("../img/dydetec-intro-placeholder.jpg");
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center;
+        // background-attachment: fixed;
+    }
+}
+
+
+section.home-experience{
+    h2{
+        @include media-breakpoint-down(md) {
+            font-size: 2rem;
+        }
+    }
+}
+
+section.home-aboutus{
+    h2{
+        @include media-breakpoint-down(md) {
+            font-size: 2rem;
+        }
+    }
+}
+
+
+section.home-contact{
+    iframe:not(.google-map-iframe){
+        box-shadow: 0px 4px 8px #d5d5d5;
+        border: 0px;
+        @include transition(0.3s);
+
+        &:hover{
+            box-shadow: 0px 8px 16px #d5d5d5;
+        }
+    }
+}
+
+
+/* About
+*
+-----------------------*/
+section.about-mission-statement{
+    .col-12:first-child{
+        border-right: 2px solid $dydetec-gray;
+    }
+}
+
+section.about-phylosophy{
+    .philosophy-icon{
+        width: 15%;
+        height: auto;
+
+        @include media-breakpoint-up(lg) {
+            width: 10%;
+        }
+    }
+}
+
+
+/* Projects
+*
+-----------------------*/
+section.projects-intro{
+    background-image: url('../img/projects/imagen11.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    header{
+        background: $dydetec-pink;
+    }
+}
+
+
+section.projects-categories{
+    figure{
+        position: relative;
+        border-radius: 0px !important;
+
+        .figure-img{
+            border-radius: 0px !important;
+        }
+
+        figcaption{
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            background: $dydetec-pink;
+            color: white;
+        }
+
+        &:hover{
+            figcaption{
+                box-shadow: 0px 8px 8px $dydetec-gray;
+                @include transition(0.3s);
+            }
+        }
+    }
+}
+
+
+section.projects-carousel{
+    figure{
+        position: relative;
+        border-radius: 0px !important;
+
+        .blue-overlay{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 98%;
+            background-color: $dydetec-blue;
+            opacity: 0.4;
+        }
+        
+        .figure-img{
+            border-radius: 0px !important;
+        }
+
+        figcaption{
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: $dydetec-pink;
+            color: white;
+        }
+
+        &:hover{
+            figcaption{
+                box-shadow: 0px 8px 8px $dydetec-gray;
+                @include transition(0.3s);
+            }
+        }
+    }
+}
+
+
+section.project-page{
+    .card{
+        box-shadow: 0px 4px 8px #d5d5d5;
+        border: 0px;
+        @include transition(0.3s);
+
+        h6{
+            color: $dydetec-gray;
+        }
+
+        p{
+            font-size: 0.8rem;
+            color: $dydetec-gray;
+        }
+
+        &:hover{
+            box-shadow: 0px 8px 16px #d5d5d5;
+        }
+    }
+}
+
+
+/* Services
+*
+-----------------------*/
+section.services-intro{
+    background-image: url('../img/imagen31.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    header{
+        background: $dydetec-pink;
+    }
+}
+
+
+section.services-carousel{
+    #carouselExampleControls{
+        padding: 1.5rem;
+
+        .col-gray-bg{
+            background-color: #F7F9FA;
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+    }
+
+    .col-blue-circle{
+        position: relative;
+
+        #blue-circle-text{
+            position: absolute;
+            bottom: -2rem;
+            right: -2rem;
+        }
+
+        // figure{
+        //     position: relative;
+        //     height: 100%;
+        //     width: 100%;
+
+        //     figcaption{
+        //         position: absolute;
+        //         bottom: 0px;
+        //         right: 0px;
+        //         width: 35%;
+        //         padding: 4rem 2rem;
+    
+        //         background: url('../ui/blue-circle.png');
+        //         background-size: 100% 100%;
+        //         background-repeat: no-repeat;
+        //     }
+        // }
+    }
+}
+
+
+/* Tecnovigilancia
+*
+-----------------------*/
+section.tecnovigilancia-intro{
+    background-image: url('../img/dydetec-tecnovigilancia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-attachment: fixed;
+}
+
+
+section.tecnovigilancia-description{
+    margin-top: -8rem;
+}
+
+
+/* Blog
+*
+-----------------------*/
+section.news{
+    figure{
+        position: relative;
+
+        figcaption{
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+
+            h4, p{
+                color: white;
+            }
+        }
+    }
+
+    .card{
+        box-shadow: 0px 4px 8px #d5d5d5;
+        border: 0px;
+        @include transition(0.3s);
+
+        h6{
+            color: $dydetec-pink;
+        }
+
+        &:hover{
+            box-shadow: 0px 8px 16px #d5d5d5;
+        }
+    }
+}
+
+
+section.newsletter-box{
+    .newsletter-box-bg{
+        @include media-breakpoint-down(md) {
+            background-image: url(https://res.cloudinary.com/iconicamx/image/upload/c_scale,w_640/v1615866441/Dydetec/ui/dydetec-newsletter-box_ukhpko.webp);
+        }
+        background-image: url(https://res.cloudinary.com/iconicamx/image/upload/c_scale,w_1200/v1615866441/Dydetec/ui/dydetec-newsletter-box_ukhpko.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 5rem 8rem;
+    }
+}
+
+article{
+    p{
+        text-align: justify;
+
+        &:nth-last-child(2){
+            margin-bottom: 3rem;
+        }
+    }
+
+    img.float-right{
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            width: 50%;
+        }
+    }
+
+    aside{
+        p{
+            text-align: left;
+
+            &:nth-last-child(2){
+                margin-bottom: 1rem;
+            }
+        }
+        .card{
+            box-shadow: 0px 4px 8px #d5d5d5;
+            border: 0px;
+            @include transition(0.3s);
+
+            a{
+                color: $dydetec-gray;
+
+                // &::after {
+                //     content: "\A";
+                //     white-space: pre;
+                // }
+            }
+
+            &:hover{
+                box-shadow: 0px 8px 16px #d5d5d5;
+            }
+        }
+    }
+}
+
+
+/* Contact
+*
+-----------------------*/
+section.contact-section{
+    iframe.google-map-iframe{
+        min-height: 99vh;
+        width: 100%;
+        height: 100%;
+    }
+
+    iframe:not(.google-map-iframe){
+        box-shadow: 0px 4px 8px #d5d5d5;
+        border: 0px;
+        @include transition(0.3s);
+
+        &:hover{
+            box-shadow: 0px 8px 16px #d5d5d5;
+        }
+    }
+}
